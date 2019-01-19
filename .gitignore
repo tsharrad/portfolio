@@ -27,4 +27,4 @@
 /config/master.key
 
 # I don't want the secrets file pushed.
-/config/secrets/.yml
+/config/secrets.yml
