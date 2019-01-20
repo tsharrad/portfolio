@@ -1,6 +1,6 @@
 # T_Sharrad Portfolio Application
 
-> This is a Ruby on Rails 5 application!
+> This is a Ruby on Rails 5 application!!
 
 ### Features
 
