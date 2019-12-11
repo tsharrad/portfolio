@@ -39,6 +39,7 @@ def show
   @portfolio_item = Portfolio.find(params[:id])
 end
 
+
 def destroy
   # Performs the lookup of the portfolio item
   @portfolio_item = Portfolio.find(params[:id])
@@ -53,3 +54,6 @@ def destroy
 end
 
 end
+
+
+
