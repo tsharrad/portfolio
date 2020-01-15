@@ -4,6 +4,9 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
+  def react
+    @react_portfolio_items = Portfolio.react
+
   def new
     @portfolio_item = Portfolio.new
   end
@@ -59,6 +62,5 @@ def destroy
       format.html { redirect_to portfolios_url, notice: 'Portfolio item was removed' }
     end
 end
-
-
+end
 end
