@@ -8,8 +8,8 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new
   end
 
-  def react
-    @react_portfolio_items = Portfolio.react
+  # def react
+  #   @react_portfolio_items = Portfolio.react
 
   def create
 
@@ -22,7 +22,7 @@ class PortfoliosController < ApplicationController
         format.html { render :new }
     end
   end
- end
+ # end
 
  def edit
 
