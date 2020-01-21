@@ -4,12 +4,12 @@ class PortfoliosController < ApplicationController
     @portfolio_items = Portfolio.all
   end
 
-  def react
-    @react_portfolio_items = Portfolio.react
-
   def new
     @portfolio_item = Portfolio.new
   end
+
+  def react
+    @react_portfolio_items = Portfolio.react
 
   def create
 
