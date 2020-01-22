@@ -6,11 +6,16 @@ class PortfoliosController < ApplicationController
 
   def new
     @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
+
+  # def react
+  #   @react_portfolio_items = Portfolio.react
 
   def create
 
-    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, 
+      technologies_attributes: [:name]))
 
     respond_to do |format|
       if @portfolio_item.save
@@ -19,7 +24,7 @@ class PortfoliosController < ApplicationController
         format.html { render :new }
     end
   end
- end
+ # end
 
  def edit
 
@@ -59,6 +64,5 @@ def destroy
       format.html { redirect_to portfolios_url, notice: 'Portfolio item was removed' }
     end
 end
-
-
+end
 end
